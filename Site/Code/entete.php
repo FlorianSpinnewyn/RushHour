@@ -1,7 +1,7 @@
 <?php
 //___________________________________________CONNEXION AU SERVEUR + VERIFICATION DES ACCENTS________________________________________________
 include('connexion.php'); // permet la connexion au serveur
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="fr"> 
