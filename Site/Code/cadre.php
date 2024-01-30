@@ -1,8 +1,3 @@
-<?php 	
-		include('entete.php');		// permet d'avoir la connexion + les liens bootstrap + le menu du haut de page
-		include('requete.php');		// permet d'avoir des variables de session et des requêtes
-		include('test.php');		// permet d'avoir les données récupérées dans le fichier du solveur
-		?>
 <html>
 <head>
 	<title>Time* point(heure)</title>

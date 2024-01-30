@@ -1,4 +1,3 @@
-<?php include('connexion.php'); ?>
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
@@ -17,7 +16,9 @@
 </head>
 
 <body>
-	<?php	
+	<?php
+		include('connexion.php');		// permet la connexion au serveur
+		session_start();
 		function motdepasse($string)		// vérification si le mot de passe respecte les attentes
 		{
 			$taille = strlen($string);

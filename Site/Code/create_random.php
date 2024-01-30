@@ -1,5 +1,6 @@
-<?php session_start();
+<?php
 	include('connexion.php');
+	session_start();
 	$nbrvoiture = $_GET["nbrVoiture"];
 	$nbrCamion = $_GET["nbrCamion"];
 	$total=$nbrCamion+$nbrvoiture;

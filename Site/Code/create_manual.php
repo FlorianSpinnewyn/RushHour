@@ -1,6 +1,3 @@
-<?php 
-		include('entete.php');		// permet d'avoir la connexion au serveur et le menu du haut de page
-	?>
 <html>
 <head>
 	<title>Create</title>
@@ -10,6 +7,9 @@
 </head>
 
 <body>
+	<?php 
+		include('entete.php');		// permet d'avoir la connexion au serveur et le menu du haut de page
+	?>
 <!-- _____________________________________________PAGE POUR CREER UN NIVEAU DE MANIERE MANUELLE__________________________________________-->
 
 <div style='height:880px; background-color: #eeeeee;'>

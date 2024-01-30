@@ -1,4 +1,3 @@
-<?php include ('entete.php'); ?>
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
@@ -10,7 +9,7 @@
 
 <body>
 	<?php
-				// permet d'avoir la connexion au serveur et le menu du haut de page
+		include ('entete.php');		// permet d'avoir la connexion au serveur et le menu du haut de page
 		if (isset($_SESSION['error'])) { $_SESSION['error']=0; }		// remise à 0 des erreurs de connexion
 		
 		if(isset($_POST['idNiveau']))

@@ -1,4 +1,3 @@
-<?php include('play.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
  
@@ -7,7 +6,7 @@
  
 <body>
 	<?php 
-			// permet d'avoir le cadre esthétique de la page + la connexion + les requêtes
+	include('play.php');		// permet d'avoir le cadre esthétique de la page + la connexion + les requêtes
 	echo "<form method='post' style='position: absolute;top: 68%;left: 17%;' action='nivorien.php#ici'>";
 //______________________________________________AFFICHAGE DES VEHICULES DANS LE PARKING_______________________________________________
 	
