@@ -10,7 +10,7 @@
 <body>
 	<?php
 //__________________________________________________________PAGE D'ACCUEIL__________________________________________________________
-	
+	ob_start();
 	session_start();
 	include('Code/connexion.php');		// permet la connexion au serveur
 
