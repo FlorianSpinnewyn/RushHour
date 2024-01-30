@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 if(isset($_POST['info']) && isset($_POST['levelname']) && isset($_POST['vehicule']))
 {
@@ -15,8 +15,7 @@ if(isset($_POST['info']) && isset($_POST['levelname']) && isset($_POST['vehicule
 		fclose($file);
 		
 		include('connexion.php');
-		session_start();
-			
+
 		exec('solveur.exe');
 		$source4="test.txt";		// récupération du fichier test.txt modifié par le solveur
 		$fichier4=fopen($source4,"r+");
