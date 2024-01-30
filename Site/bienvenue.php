@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
@@ -11,7 +12,6 @@
 	<?php
 //__________________________________________________________PAGE D'ACCUEIL__________________________________________________________
 	
-	session_start();
 	include('Code/connexion.php');		// permet la connexion au serveur
 
 	if (isset($_SESSION['error'])){ $_SESSION['error']=0; }		// mise à jour du code erreur à 0
