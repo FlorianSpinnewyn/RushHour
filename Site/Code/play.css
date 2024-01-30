@@ -1,0 +1,285 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+/*_______________________________________________PAGE DU JEU ET DES INDICES / SOLUTION___________________________________________ */
+.article { font-family: Georgia, serif; }	/* les lettres du dictionnaire */
+.card-link		/* nom de l'onglet de l'accordéon */
+{
+	color: white;
+	font-family: Georgia, serif;
+}
+.card-link:hover { color: #4E4E4E; }
+.vehi		/* la voiture rouge */
+{
+	width: 110px;
+	height: 51px;
+}
+.vh		/* les voitures horizontales */
+{
+	width: 110px;
+	height: 51px;
+}
+.ch		/* les camions horizontaux */
+{
+	width: 171px;
+	height: 51px;
+}
+.bout		/* des boutons */
+{
+	background: #05A693;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 12px;
+}
+.bout:hover
+{
+	text-decoration: none;
+	color: white;
+}
+
+/*___________________________________________________PAGE DU JEU________________________________________________ */
+.jeu		/* ensemble de tout */
+{
+	position: absolute;
+	top: 43%;
+	left: 3%;
+	width: 55%;
+	height: 103%;
+	margin-bottom: 	5%;
+	background-color: #C0C0C0;
+	border: solid 5px #4E4E4E;
+}
+.carre
+{
+	position: absolute;
+	right: -72%;
+	width: 65%;
+	background-color: #C0C0C0;
+	border: none;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+}
+.rules
+{
+	top: 1%;
+}
+.help
+{
+	top: 63%;
+	height: 36%;
+}
+.jeu2
+{
+	position: absolute;
+	top: 3%;
+	left: 30%;
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 250%;
+	font-weight: bold;
+	color: #036B5F;
+	z-index:3;
+}
+.pr
+{
+	position: absolute;
+	bottom: 55%;
+	right: 6%;
+}
+.de
+{
+	
+	position: absolute;
+	bottom: 28%;
+	right: 6%;
+}
+.tr
+{
+	position: absolute;
+	bottom: 13%;
+	right: 6%;
+}
+.dico
+{
+	position: absolute;
+	right: -72%;
+	width: 65%;
+	background-color: #C0C0C0;
+	border: none;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+	top: 1%;
+}
+.fond		/* fond gris */
+{
+	position: absolute;
+	top: 13%; left: 17.5%; width: 66%; height: 82%;
+	color: #606060;
+	background-color: #606060;
+	border: 3px solid #606060;
+	border-radius: 10px;
+	box-shadow: inset 3px 3px white, inset 0px 0px 3px 3px black;
+	z-index: 0;
+}
+.sol		/* ensemble des cases consituants le parking */
+{
+	position: absolute;
+	top: 23%; left: 24%; width: 53%; height: 60%;
+	background-color: #909090;
+	border: 3px solid black;
+	border-spacing: 5px;
+	box-shadow: 3px 3px white;
+	z-index: 1;
+}
+.hg{ box-shadow: 13px 13px 13px #505050, inset 3px 3px white, inset 0px 0px 3px 3px silver; }		/* case en haut à gauche */
+.hd{ box-shadow: -13px 13px 13px #505050 ,inset 3px 3px white, inset 0px 0px 3px 3px silver; }		/* case en haut à droite */
+.bg{ box-shadow: 13px -13px 13px #505050, inset 3px 3px white, inset 0px 0px 3px 3px silver; }		/* case en bas à gauche */
+.bd{ box-shadow: -13px -13px 13px #505050, inset 3px 3px white, inset 0px 0px 3px 3px silver; }		/* case en bas à droite */
+.parking		/* chaque case du parking */
+{
+	border-radius: 10px;
+	background-color: #505050;
+	width: 4%;
+	height: 4%;
+}
+.sortie		/* sortie au bout de la 3e ligne */
+{
+	position: absolute;
+	top: 42%; left: 76.6%; width: 5.8%; height: 12%;
+	background-color: #606060;
+	box-shadow: inset 0px 6px #909090, 0px 3px black, 0px -3px black, 0px -6px white;
+	z-index: 2;
+}
+.point		/* petit point noir pour respecter les contours */
+{
+	position: absolute;
+	top: 40.9%; left: 76.6%; width: 0.4%; height: 1%;
+	background-color: black;
+	z-index: 3;
+}
+.btn-sound
+{
+	position:absolute;
+	width:3em;
+	left: 95%;
+	top:95%;
+	transform: translate(-50%, -50%);
+}
+
+/*________________________________________________PAGE DES INDICES / SOLUTION_____________________________________________ */
+.soluce		/* ensemble du carré affichant la solution et l'indice */
+{
+	position: absolute;
+	top: 43%;
+	left: 3%;
+	width: 35%;
+	margin-bottom: 	5%;
+	background-color: #C0C0C0;
+	border: solid 5px #4E4E4E;
+}
+.jeu1		/* titre de l'onglet indice et solution */
+{
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 200%;
+	margin-top: 2%;
+	font-weight: bold;
+	color: #036B5F;
+}
+.olive		/* affichage de l'indice */
+{
+	font-family: Georgia, serif;
+	margin-left: 20%;
+}
+.quatro		/* retour au jeu après l'indice */
+{
+	position:absolute;
+	right:3%;
+	bottom:20px;
+}
+.cinquo		/* retour au jeu après la solution */
+{
+	position:absolute;
+	right:3%;
+	bottom:10px;
+}
+.dictionnaire		/* dictionnaire sous forme d'accordéon */
+{
+	position: absolute;
+	right: 3%;
+	width: 55%;
+	background-color: #C0C0C0;
+	border: none;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+	top: 44%;
+}
+.titre		/* des titres */
+{
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 2%;
+	font-weight: bold;
+	color: #036B5F;
+}
+/*________________________________________PAGE DU JEU (CE QUI CONCERNE LE FICHIER NIVORIEN.PHP)____________________________________ */
+.paragraphe
+{
+	font-family: Georgia, serif;
+	font-size: 85%;
+	margin: 3% 4%;
+}
+.vehicule
+{
+	position: absolute;
+	top: 100px; left: 430px; width: 420px; height: 420px;
+	color: white;
+	z-index: 4;
+}
+.cvertical
+{
+	width: 51px;
+	height: 171px;
+	z-index:5;
+}
+.chorizontal
+{
+	width: 171px;
+	height: 51px;
+	z-index:5;
+}.vvertical
+{
+	width: 51px;
+	height: 110px;
+	z-index:5;
+}.vhorizontal
+{
+	width: 110px;
+	height: 51px;
+	z-index:5;
+}
+.image
+{
+	background: 0;
+	border: none;
+	opacity: 1;
+	display: block;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+.image:hover
+{
+	opacity: 0.3;
+}
+.text {
+	background-color: #505050;
+	color: white;
+	padding: 3px 10px 7px 10px;
+	border: none;
+	border-radius: 10px;
+	z-index: 6;
+}
+.card-body { background-color: #C0C0C0;}

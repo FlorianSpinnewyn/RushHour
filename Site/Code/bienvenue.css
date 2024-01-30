@@ -1,0 +1,214 @@
+/*___________________________________________________PAGE DE BIENVENUE________________________________________________ */
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+.jour		/* ciel bleu clair avec nuage */
+{
+	z-index:1;
+	height: 100vh;
+	width: 100%;
+	position:absolute;
+	-webkit-animation: fadeInOpacity 30s infinite;
+}
+@-webkit-keyframes fadeInOpacity		/* animation changement de ciel */
+{
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+	30% {
+        opacity: 0;
+    }
+	60%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.nuit		/* ciel étoilé */
+{
+	z-index:0;
+	height: 100vh;
+	width: 100%;
+	position:absolute;
+}
+.ciel		/* emplacement des 2 ciels */
+{
+	z-index:2;
+	height: 100.1vh;
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+.logo		/* logo time* point(heure) */
+{
+	position: absolute;
+	margin-top: 1%;
+	margin-left: 1%;
+	height: 98%;
+	width: 100%;
+	z-index: 2;
+}
+.rectangle		/* cadre du logo */
+{
+	position: absolute;
+	border: 1px solid #4E4E4E;
+	width: 40%;
+	height: 90px;
+	list-style: none;
+	background: #4E4E4E;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	top: 9%;
+	left: 30.5%;
+	z-index: 1;
+}
+.menu /* les 3 boutons */
+{
+    position: absolute;
+    height: 6%;
+    z-index: 2;
+    font-family: Georgia, serif;
+    background: 0;
+    font-size: 30px;
+    text-decoration:none;
+    -webkit-animation: ColorChange 30s infinite;
+}
+@-webkit-keyframes ColorChange {
+    0% {
+        color:black;
+    }
+    15% {
+        color:black;
+    }
+    30% {
+        color:white;
+    }
+    60%{
+        color:black;
+    }
+    100%{
+        color:black;
+    }
+}
+.ecriture1		/* Play */
+{
+	left: 41%;
+	top: 26%;
+	width: 260px;
+	padding: 1% 6% 3.5%;
+}
+.bouton1		/* Play */
+{
+	border:0;
+}
+.ecriture2		/* See all levels */
+{
+	left: 41%;
+	top: 36%;
+	width: 220px;
+	padding-top: 1%;
+	padding-left: 4%;
+}
+.ecriture3		/* Create your level */
+{
+	left: 41%;
+	top: 46%;
+	width: 250px;
+	padding-top: 1%;
+	padding-left: 2%;
+}
+.menu:hover		/* lorsqu'on survole le menu */
+{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	border: 1px solid 0;
+}
+.route		/* la route */
+{
+	height: 180px;
+	width: 500%;
+	display: block;
+	background-image: url(image/chaussee.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: route 5s linear infinite;
+}
+@keyframes route		/* animation de la route */
+{
+	100% { transform: translateX(-2100px); }
+}
+.ville		/* la ville */
+{
+	height: 250px;
+	width: 500%;
+	position: absolute;
+	background-image: url(image/ville.png);
+	bottom: 180px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: ville 20s linear infinite;
+}
+@keyframes ville		/* animation de la ville */
+{
+	100% { transform: translateX(-1400px); }
+	
+}
+.voiture		/* la voiture rouge */
+{
+	width: 400px;
+	left: 50%;
+	bottom: 70px;
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+.voiture img
+{
+	width: 100%;
+	animation: voiture 1s linear infinite;
+}
+@keyframes voiture		/* animation de la voiture */
+{
+	100% { transform: translateY(-2px); }
+	50% { transform: translateY(2px); }
+	0% { transform: translateY(-2px); }
+	
+}
+.roue		/* les 2 roues */
+{
+	left: 50%;
+	bottom: 158px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+}
+.roue img
+{
+	width: 72px;
+	height: 72px;
+	animation: roue 1s linear infinite;
+}
+.roue-arriere		/* la roue arrière */
+{
+	left: -164px;
+	position: absolute;
+}
+.roue-avant		/* la roue avant */
+{
+	left: 93px;
+	position: absolute;
+}
+@keyframes roue		/* animation des deux roues */
+{
+	100% { transform: rotate(360deg); }
+}

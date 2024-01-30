@@ -1,0 +1,171 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+/*_________________________________________________EN TET DE TOUTES LES PAGES______________________________________________ */
+.warning		/* message d'erreur lié au mot de passe et au pseudo */
+{
+	font-family: Georgia, serif;
+	color: red;
+	text-align: center;
+	font-size: 1.5rem;
+}
+.here
+{
+	border: none;
+	color:#76E7A6;
+}
+.here:hover
+{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.icone		/* barre des voitures en ahut */
+{
+	height: 3%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.top		/* barre grise du haut */
+{
+	background-color: #4E4E4E;
+	height: 177px;
+	width: 100%;	
+}
+.logo		/* la case du logo */
+{
+	height: 100%;
+	width: 100%;
+	z-index: 2;	
+}
+.logo2		/* l'image du logo */
+{
+	margin-top: 3%;
+	margin-left: 20%;
+	height: 60%;
+	width: 60%;
+	z-index: 2;
+	background: 0;
+	border: none;	
+}
+.logo2:hover		/* le zoom survolant le logo */
+{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.vroum2		/* la voiture en haut à gauche qui sert de bouton retour à la page bienvenue */
+{
+	position: absolute;
+	top: 35px;
+	left: 10px;
+	width: 60px;
+	height: 30px;
+	transition: transform .7s ;
+}
+.vroum2:hover		/* la rotation de la voiture */
+{
+	transform: rotate(360deg);
+	cursor: pointer;
+}
+.zoom		/* animation d'un zoom */
+{
+	transition: transform .2s ;
+    perspective: viewer-distance;
+}
+.zoom:hover
+{
+	transform: scale(1.5);
+}
+.vroum		/* les 2 voitures qui font la course en bas à droite */
+{
+	position: absolute;
+	top: 138px;
+	right: 15px;
+	width: 75px;
+	height: 40px;
+	transition: transform 6s;
+}
+.vroum:hover		/* animation des voitures */
+{
+	transform: translateX(-1500px);
+}
+.formu		/* formulaire d'inscription et de connexion */
+{
+	height:auto; 
+	padding-top:0;
+	padding-bottom:0;
+	font-family: Georgia, serif;
+	background-color: #05A693;
+	z-index: 5;
+}
+.nav-submit
+{
+	background-color: #44BCAE;
+	width:100%;
+	padding:0.2rem;
+	border-radius:5px;
+	border:none;
+	opacity:0.7;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	color:#03534A;
+	box-shadow: 3px 3px 5px #036B5F;
+}
+.nav-submit:hover
+{
+	background-color: #03534A;
+	color: white;
+}
+.remplir		/* case à écrire dedans */
+{
+	margin-left:0.5rem;
+	margin-right:0.5rem;
+	border-radius:10px;
+	border: 1px solid #036B5F;
+	box-shadow: 3px 3px 5px #036B5F;
+	opacity: 0.7;
+}
+.dropdown-menu-center
+{
+	z-index:5;
+	text-align:center;
+}
+.cadre_formulaire
+{
+	width: 100%;
+}
+.navbar
+{
+	background-color:#05A693;
+	margin: 0;
+	padding: 0;
+	width: 101.2%;
+	height: 45px;
+	font-weight:bold;
+}
+.nav-link
+{
+	color:white;
+}
+.nav-link:hover
+{
+	opacity:0.7;
+	color:white;
+}
+.nav-btn
+{
+	font-weight:bold;
+	border:0;
+	background-color: #05A693;
+	width:100%;
+	color:white;
+
+}
+.nav-btn:hover
+{
+	color:white;
+	font-weight:bold;
+	opacity:0.7;
+}

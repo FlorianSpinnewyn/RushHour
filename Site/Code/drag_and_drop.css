@@ -1,0 +1,233 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.banque
+{
+    position: absolute;
+    right: -72%;
+    width: 65%;
+    background-color: #C0C0C0;
+    border: none;
+    box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+    top: 1%;
+}
+.titre
+{
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2%;
+    font-weight: bold;
+    color: #036B5F;
+} 
+
+/*pour voitures horizontal*/
+.zoneentierevh
+{
+	background: 0;
+	width: 53%;	
+	height: 7%;
+	position: absolute;
+	left: 24.5%;
+	z-index: 6;
+}
+
+.ligne1 { top: 22.5%; }
+.ligne2 { top: 30%; }
+.ligne3 { top: 37.5%; }
+.ligne4 { top: 45%; }
+.ligne5 { top: 52%; }
+.ligne6 { top: 59.5%; }
+
+.zoneimagevh
+{
+	background: 0;
+	z-index: 6;
+	height: 100%;
+	width: 33.3%;
+	position: absolute;
+}
+
+.colonne1 { left: 0; }
+.colonne2 { left: 16.6%; }
+.colonne3 { left: 33.2%; }
+.colonne4 { left: 49.8%; }
+.colonne5 { left: 66.4%; }
+.colonne6 { left: 83%; }
+
+.zonedropvh
+{
+	background: 0;
+	z-index: 6;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*pour voiture vertical*/
+.zoneentierevv
+{
+	background:0;
+	width: 8%;	
+	height: 44%;
+	position: absolute;
+	top: 22.5%;
+	z-index:6;
+}
+
+.colonn1 { left: 25%; }
+.colonn2 { left: 33.7%; }
+.colonn3 { left: 42.6%; }
+.colonn4 { left: 51.4%; }
+.colonn5 { left: 60.1%; }
+.colonn6 { left: 68.7%; }
+
+.zoneimagevv
+{
+	background: 0;
+	z-index: 6;
+	height: 33.3%;
+	width: 100%;
+	position: absolute;
+}
+
+.lign1 { top: 0%; }
+.lign2 { top: 16.6%; }
+.lign3 { top: 33.2%; }
+.lign4 { top: 49.8%; }
+.lign5 { top: 66.4%; }
+.lign6 { top: 83%; }
+
+.zonedropvv
+{
+	background: 0; 
+	z-index: 6;
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*pour camion horizontal*/
+.zoneentierech {
+	background: 0;
+	z-index: 6;
+	width: 51.5%;	
+	height: 7%;
+	position: absolute;
+	top: 27.5%;
+	left: 25%;
+}
+
+.lig1 { top: 22.5%; }
+.lig2 { top: 30.2%; }
+.lig3 { top: 37.7%; }
+.lig4 { top: 45%; }
+.lig5 { top: 52.2%; }
+.lig6 { top: 59.5%; }
+
+.zoneimagech {
+	background: 0;
+	z-index: 6;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+}
+
+.col1 { left: 0; }
+.col2 { left: 16.6%; }
+.col3 { left: 33.2%; }
+.col4 { left: 49.8%; }
+.col5 { left: 66.4%; }
+.col6 { left: 83%; }
+
+.zonedropch {
+	background: 0;
+	z-index: 6;
+	height: 100%;
+	width: 33.3%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*pour camion vertical*/
+.zoneentierecv {
+	background: 0;
+	z-index: 6;
+	width: 8%;	
+	height: 44%;
+	position: absolute;
+	top: 22.5%;
+}
+
+.co1 { left: 25%; }
+.co2 { left: 33.7%; }
+.co3 { left: 42.6%; }
+.co4 { left: 51.3%; }
+.co5 { left: 60.1%; }
+.co6 { left: 68.7%; }
+
+.zoneimagecv {
+	background: 0;
+	z-index: 6;
+	height: 50%;
+	width: 100%;
+	position: absolute;
+}
+
+.li1 { top: 0%; }
+.li2 { top: 16.6%; }
+.li3 { top: 33.2%; }
+.li4 { top: 49.8%; }
+.li5 { top: 66.4%; }
+.li6 { top: 83%; }
+
+.zonedropcv {
+	background: 0;
+	z-index: 6;
+	height: 33.3%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.devant {
+	z-index: 10;
+}
+
+.zonesurvole {
+	border: dashed 2px red;
+}
+.vv
+{
+	width: 51px;
+	height: 110px;
+}
+.vh
+{
+	width: 110px;
+	height: 51px;
+}
+.voiturerouge
+{
+	width: 110px;
+	height: 51px;
+}
+.cv
+{
+	width: 51px;
+	height: 165px;
+}
+.ch
+{
+	width: 171px;
+	height: 51px;
+}

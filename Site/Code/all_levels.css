@@ -1,0 +1,38 @@
+/*______________________________________________PAGE OU TOUS LES NIVEAUX SONT AFFICHES___________________________________________ */
+.ok		/* l'ensemble du carrousel */
+{
+	position: absolute;
+	top:8%;
+	left: 3%;
+	width: 94%;
+	background-color:#C0C0C0;
+	border: none;
+	box-shadow: 0 22px 26px 0 rgba(0,0,0,0.24), 0 27px 60px 0 rgba(0,0,0,0.19);
+}
+.ok3		/* les titres de chaque onglet du carrousel */
+{
+	text-align:center;
+	font-family: Georgia, serif;
+	color:#036B5F;
+	font-weight:bold;
+	padding-top: 1%;
+}
+.carte		/* l'image du bouton du niveau */
+{
+	padding: 3% 5%;
+	float:left;
+	background: 0;
+	border: none;
+}
+.case		/* l'ensemble de la case du bouton */
+{
+	padding-left: 7%;
+}
+.fleche		/* les flèches */
+{
+	padding:1rem 1rem 1rem 1rem;
+	border-radius:10px;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 3px #999;
+	background-color:black;
+}

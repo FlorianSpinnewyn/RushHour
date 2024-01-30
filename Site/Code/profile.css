@@ -1,0 +1,366 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+/*_________________________________________________PAGE DU PROFIL ET DE LA VICTOIRE_____________________________________________ */
+ul li
+{
+	position: absolute;
+	border: 1px solid #fff;
+	width: 30px;
+	height: 30px;
+	list-style: none;
+	opacity:0;
+	background: #fff;
+}
+.square li
+{
+	top: 50vh;
+	left: 45vw;
+	animation: square 10s linear infinite;
+}
+.square li:nth-child(2)
+{
+	top: 90vh;
+	left: 10vw;
+	animation-delay: 2s;
+}
+.square li:nth-child(3)
+{
+	top: 85vh;
+	left: 90vw;
+	animation-delay: 4s;
+}
+.square li:nth-child(4)
+{
+	top: 10vh;
+	left: 80vw;
+	animation-delay: 6s;
+}
+.square li:nth-child(5)
+{
+	top: 10vh;
+	left: 3vw;
+	animation-delay: 8s;
+}
+@keyframes square
+{
+	0%
+	{
+		transform: scale(0) rotateY(0deg);
+		opacity:1;
+	}
+	100%
+	{
+		transform: scale(5) rotateY(1000deg);
+		opacity:0;
+	}
+}
+.circle li
+{
+	bottom: 0;
+	left: 15vw;
+	animation: circle 10s linear infinite;
+}
+.circle li:nth-child(2)
+{
+	left: 35vw;
+	animation-delay: 2s;
+}
+.circle li:nth-child(3)
+{
+	left: 55vw;
+	animation-delay: 6s;
+}
+.circle li:nth-child(4)
+{
+	left: 75vw;
+	animation-delay: 4s;
+}
+.circle li:nth-child(5)
+{
+	left: 90vw;
+	animation-delay: 8s;
+}
+@keyframes circle
+{
+	0%
+	{
+		transform: scale(0) rotate(0deg);
+		opacity:1;
+		bottom: 0;
+		border-radius: 0;
+	}
+	100%
+	{
+		transform: scale(5) rotate(1000deg);
+		opacity:0;
+		bottom: 90vh;
+		border-radius: 50%;
+	}
+}
+.test
+{
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 6vh;
+	z-index:1;
+}
+.text
+{
+	font-family: Georgia, serif;
+	z-index:5;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border:0;
+	color:black;
+	padding:20% 33% 20% 33%;
+	font-size:2rem;
+}
+.card-title
+{
+	color:white;
+	margin-left:15%;
+	font-size: 4.5rem;
+	font-family: Georgia, serif;
+}
+.card-text
+{
+	opacity:1;
+}
+.case
+{
+	height:79%;
+	padding-top:1.6rem;
+
+}
+.formu
+{
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+	position:relative;
+	top:5.5rem;
+	padding:1rem;
+	height:70%;
+}
+.formu-title
+{
+	color:white;
+	font-size:2rem;
+	text-align:center;
+}
+.formu-remplir
+{
+	border-radius:10px;
+	margin-top:1rem;
+	border: 1px solid #036B5F;
+	box-shadow: 3px 3px 5px #036B5F;
+	opacity: 0.7;
+	width:90%;
+}
+.formu-submit
+{
+	background-color: #44BCAE;
+	margin-top:1rem;
+	margin-bottom:1rem;
+	width:100%;
+	padding:0.2rem;
+	border-radius:5px;
+	border:none;
+	opacity:0.7;
+	color:#03534A;
+	box-shadow: 3px 3px 5px #036B5F;
+}
+/*___________________________________________________PAGE DU PROFIL________________________________________________ */
+.big-welcome		/* fond dégradé */
+{
+	background-image: linear-gradient(#C0C0C0,#05A693);
+	position: relative;
+	overflow: hidden;
+	height: 105rem;
+}
+.small-welcome		/* fond dégradé */
+{
+	background-image: linear-gradient(#C0C0C0,#05A693);
+	position: relative;
+	overflow: hidden;
+	height: 38rem;
+}
+.avatar
+{
+	position:relative;
+	z-index:4;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+}
+.card-img
+{
+	z-index:5;
+	display: block;
+  	width: 100%;
+	height: auto;
+	margin-top:27%;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #008CBA;
+}
+.avatar:hover .overlay
+{
+	opacity: 0.7;
+	background-color:#D9D7D7;
+}
+.big-card		/* affichage de la carte profile */
+{
+	z-index: 3;
+	position: absolute;
+	top: 840px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1100px;
+	background-color: #4E4E4E;
+	opacity: 0.9;
+	border-radius:40px;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+}
+.small-card		/* affichage de la carte du changement d'avatar et de mot de passe */
+{
+	z-index: 3;
+	position: absolute;
+	top: 303px;
+	left: 50%;
+	padding-bottom:5.1rem;
+	transform: translate(-50%, -50%);
+	width: 1100px;
+	background-color: #4E4E4E;
+	opacity: 0.9;
+	border-radius:40px;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+}
+.resteafaire
+{
+	border:none;
+	margin:2px;
+	padding:1px;
+	background-color:#05A693;
+	font-family:Georgia,serif;
+	width:60%;
+	color: #4E4E4E;
+	margin-left:135px;
+}
+.resteafaire:hover
+{
+	background-color: white;
+}
+/*___________________________________________________PAGE DE LA VICTOIRE________________________________________________ */
+.welcome2		/* fond dégradé */
+{
+	background-image: linear-gradient(#C0C0C0,#05A693);
+	position: relative;
+	overflow: hidden;
+	height: 37rem;
+}
+.plouf
+{
+	z-index: 3;
+	position: absolute;
+	top: 18rem;
+	left: 15%;
+	width: 70%;
+	padding:60px 50px;
+	background-color: #4E4E4E;
+	font-family: Georgia, serif;
+	opacity: 0.7;
+	border-radius:40px;
+	box-shadow: 0 17px 21px 0 rgba(0,0,0,0.24), 0 22px 55px 0 rgba(0,0,0,0.19);
+}
+.wrapper
+{
+	width: 100%;
+	height: 37rem;
+	z-index:4;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position:absolute;
+}
+.confetti {	/*taille et caractéristiques des confettis*/
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 50%;
+	animation: confetti 5s ease-in-out -2s infinite;
+	transform-origin: left top;
+}
+.confetti:nth-child(1) { background-color: #E529EA; left: 10%; animation-delay: 0; }
+.confetti:nth-child(2) { background-color: #EA298F; left: 20%; animation-delay: -5s; }
+.confetti:nth-child(3) { background-color: #8FEA29; left: 30%; animation-delay: -3s; }
+.confetti:nth-child(4) { background-color: #EA292E; left: 40%; animation-delay: -2.5s; }
+.confetti:nth-child(5) { background-color: #EA298F; left: 50%; animation-delay: -4s; }
+.confetti:nth-child(6) { background-color: #EA8429; left: 60%; animation-delay: -6s; }
+.confetti:nth-child(7) { background-color: #EA298F; left: 70%; animation-delay: -1.5s; }
+.confetti:nth-child(8) { background-color: #EA292E; left: 80%; animation-delay: -2s; }
+.confetti:nth-child(9) { background-color: #EAE529; left: 90%; animation-delay: -3.5s; }
+.confetti:nth-child(10) { background-color: #E529EA; left: 100%; animation-delay: -2s; }
+.confetti2		/*taille et caractéristiques des confettis*/
+{
+	width: 12px;
+	height: 7px;
+	position: absolute;
+	left: 50%;
+	animation: confetti 7s ease-in-out -5s infinite;
+	transform-origin: left top;
+}
+.confetti2:nth-child(11) { background-color: #EA298F; left: 5%; animation-delay: 8; }
+.confetti2:nth-child(12) { background-color: #EA8429; left: 15%; animation-delay: -3.7s; }
+.confetti2:nth-child(13) { background-color: #E529EA; left: 25%; animation-delay: -7.5s; }
+.confetti2:nth-child(14) { background-color: #EAE529; left: 35%; animation-delay: -9s; }
+.confetti2:nth-child(15) { background-color: #EA292E; left: 45%; animation-delay: -4.3s; }
+.confetti2:nth-child(16) { background-color: #E529EA; left: 55%; animation-delay: -8.9s; }
+.confetti2:nth-child(17) { background-color: #8FEA29; left: 65%; animation-delay: -7.5s; }
+.confetti2:nth-child(18) { background-color: #EAE529; left: 75%; animation-delay: -2.4s; }
+.confetti2:nth-child(19) { background-color: #EA298F; left: 85%; animation-delay: -1.3s; }
+.confetti2:nth-child(20) {  background-color: #EA8429; left: 95%; animation-delay: -5.7s; }
+.confetti3		/* taille et caractéristiques des confettis */
+{
+	width: 6px;
+	height: 4px;
+	position: absolute;
+	left: 50%;
+	animation: confetti 6s ease-in-out -2s infinite;
+	transform-origin: left top;
+}
+.confetti3:nth-child(21) { background-color: #EAE529; left: 3%; animation-delay: -1.3s; }
+.confetti3:nth-child(22) { background-color: #8FEA29; left: 8%; animation-delay: -4.8s; }
+.confetti3:nth-child(23) { background-color: #EA298F; left: 12%; animation-delay: -9s; }
+.confetti3:nth-child(24) { background-color: #EAE529; left: 17%; animation-delay: -3.4s; }
+.confetti3:nth-child(25) { background-color: #EA292E; left: 22%; animation-delay: -7.1s; }
+.confetti3:nth-child(26) { background-color: #E529EA; left: 27%; animation-delay: -2.3s; }
+.confetti3:nth-child(27) { background-color: #EA298F; left: 33%; animation-delay: -3.6s; }
+.confetti3:nth-child(28) { background-color: #EA8429; left: 37%; animation-delay: -9.3s; }
+.confetti3:nth-child(29) { background-color: #E529EA; left: 42%; animation-delay: -8.5s; }
+.confetti3:nth-child(30) { background-color: #EA292E; left: 47%; animation-delay: -6.2s; }
+@keyframes confetti		/* mouvement des confettis */
+{
+	0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+	25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+	50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+	75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+	100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+}

@@ -1,0 +1,87 @@
+Beginner
+1				(que des camions)
+	4 véhicules		WWWOWWWWWOWWXXWOWWPQQQWWPWWWWWPWWWWW			11 coups pour gagner
+2
+	6 véhicules		ABBOWWAWCOWWXXCOWWWPPPWWWWWWWWWWWWWW			11 coups pour gagner
+3
+	8 véhicules		WWOOOPWWWWWPXXABWPQWABCCQWWWWWQRRRWW			13 coups pour gagner
+4
+	5 véhicules		WWWDDOWWWWWOWWWXXOWWWPGGWWWPWWWWWPWW			19 coups pour gagner
+5				(que des voitures)
+	9 véhicules		WWAABBWWCDEFXXCDEFWWGGHHWWWWWWWWWWWW			16 coups pour gagner
+6				(que des camions)
+	4 véhicules		WWOWWWWWOWWWXXOWWWWWWWWPWWWWWPQQQWWP			14 coups pour gagner
+7
+	8 véhicules		WWWWOPWWWWOPWWXXOPWWQRAAWWQRDDWWQRCC			36 coups pour gagner
+8				(que des camions)
+	5 véhicules		OOOWWWWWPWWWXXPWWWWWPWWQRRRWWQWWWWWQ			16 coups pour gagner
+9
+	8 véhicules		OOOWWPWWWWWPXXAWWPWWAJCCWWDJWWWWDQQQ			18 coups pour gagner
+10
+	8 véhicules		OOOPWWWWAPWWXXAPWWQWWWWWQGGCCDQWWWWD			18 coups pour gagner
+
+Intermediate
+11
+	10 véhicules		WWWAWWOOOAWWXXKWWWCWKDDECFFGWEWWWGII			15 coups pour gagner
+12
+	9 véhicules		WWWOOOWWWABPXXWABPWWQCCPWWQDDWWWQRRR			13 coups pour gagner
+13				(que des camions)
+	5 véhicules		WWOWWWWWOWWWXXOWWWPPPWWQRRRWWQWWWWWQ			24 coups pour gagner
+14
+	8 véhicules		WWWAAOWWWHWOXXPHWOQWPRRRQWPWWWQGGWWW			18 coups pour gagner
+15
+	7 véhicules		WWOABBWWOAWCWWOXXCWWPPPDWWWWWDWWWWWW			16 coups pour gagner
+16
+	6 véhicules		WWOGJJWWOGWPXXOWWPWWQQQPWWWWWWWWWWWW			22 coups pour gagner
+17
+	8 véhicules		AKKIWWAWWIWWXXOWWWWWOPPPWWOWWDWWQQQD			22 coups pour gagner
+18
+	6 véhicules		WOWWWWWOWWPWWOXXPWQQQWPWWWAHHWWWAWWW			26 coups pour gagner
+19
+	12 véhicules		WWOAAPWWOBCPXXOBCPWWDDEEWWFFGGWWHHII			23 coups pour gagner
+20
+	7 véhicules		WWOPPPWWOWWAXXOWWAWCCWWQWWWWWQWWRRRQ			15 coups pour gagner
+
+Advanced
+21
+	7 véhicules		WWWWOWWPPPOWXXAWOWWWADDWQQQGWWWWWGWW			33 coups pour gagner
+22
+	9 véhicules		WWWAAOWPPPGOXXCQGOWWCQJJRRRQWWWWWWWW			37 coups pour gagner
+23
+	8 véhicules		WWWWWWWWWWWWXXOWWWAAOBBPWWOCDPQQQCDP			32 coups pour gagner
+24
+	11 véhicules		AWWOWWAJJOWCXXDOWCWWDEEFWHGWWFWHGWII			19 coups pour gagner
+25
+	7 véhicules		WWOWWWAAOWWPWWOXXPQQQDWPWWWDCCWWWWWW			39 coups pour gagner
+26
+	10 véhicules		OKBPPPOKBCDQOXXCDQWEEAAQWWWWWWWWWWWW			28 coups pour gagner
+27
+	8 véhicules		OOOAWWWWHAWWXXHIWWPJJIWWPWWWWWPQQQWW			28 coups pour gagner
+28
+	10 véhicules		WWAOGGCCAOWWPXXOWWPWWQQQPDDWEHWWWWEH			37 coups pour gagner
+29
+	10 véhicules		BWWGCCBDDGWOXXPWWOWWPEEOWWPWAWWQQQAW			33 coups pour gagner
+30
+	12 véhicules		WABBOWWACDOWXXCDOWPJFGGWPJFHWWPIIHWW			30 coups pour gagner
+
+Expert
+31
+	7 véhicules		DDGOWWPWGOWWPXXOWWPQQQWWWWWWWWRRRWWW			52 coups pour gagner
+32
+	11 véhicules		WWOAAPWWOBBPWWOXXPWWWQQQWCCDEEWFFDGG			43 coups pour gagner
+33
+	7 véhicules		WWOWWWWWOAHHXXOAWPWWQQQPWWWWWPWWWRRR			49 coups pour gagner
+34
+	7 véhicules		WWOWWWWWOWWWWWOXXPWAAQWPWJWQWPWJWQCC			60 coups pour gagner
+35
+	13 véhicules		WWAOOOBCAWDEBCXXDEKGGHHPKWWWWPIIQQQP			28 coups pour gagner
+36
+	9 véhicules		WWWWWWAWOOOPAWIXXPCCIQWPWWWQDDRRRQWW			40 coups pour gagner
+37
+	10 véhicules		WWWOAAPPPOBCXXDOBCWWDEEFWWQQQFWWWWWW			46 coups pour gagner
+38
+	12 véhicules		WAOOOKCAWDWKCXXDPWEQQQPWEWFWPGWWFHHG			47 coups pour gagner
+39
+	10 véhicules		WWWOWWWWWOAWXXWOAWPBCCDQPBEWDQPWEGGQ			58 coups pour gagner
+40
+	10 véhicules		OOOWWPWWWWWPWWAXXPWWABCCDWEBFFDWEQQQ			53 coups pour gagner
