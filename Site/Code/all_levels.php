@@ -1,3 +1,4 @@
+<?php include('entete.php'); ?>
 <html>
 <head>
 	<title>All levels</title>
@@ -6,8 +7,7 @@
 </head>
 
 <body style='background-color: #eeeeee;'>
-	<?php		
-		include('entete.php');		// permet d'être connecté au serveur + d'avoir le menu du haut
+	<?php
 		
 		echo "<div style='height:30rem'>";
 //______________________________________________TRAITEMENT DES ERREURS LIEES AU PSEUDO OU MOT DE PASSE____________________________________________

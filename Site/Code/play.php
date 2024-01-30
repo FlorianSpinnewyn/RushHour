@@ -1,3 +1,4 @@
+<?php include('entete.php'); ?>
 <html>
 <head>
 	<title>Play</title>
@@ -7,7 +8,7 @@
 
 <body style='background-color: #eeeeee;'>
 	<?php
-		include('entete.php');		// permet d'avoir la connexion au serveur et le menu du haut de page
+			// permet d'avoir la connexion au serveur et le menu du haut de page
 		if (isset($_SESSION['error'])) { $_SESSION['error']=0; }
 		if(isset($_POST['reset']))		// suppression des données du jeu si la partie a été quitté avant la fin
 		{

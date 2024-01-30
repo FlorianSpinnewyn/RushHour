@@ -1,3 +1,4 @@
+<?php include('entete.php'); ?>
 <html>
 <head>
 	<title>Create</title>

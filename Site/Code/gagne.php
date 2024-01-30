@@ -1,3 +1,4 @@
+<?php include('entete.php'); ?>
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
@@ -7,8 +8,7 @@
 </head>
 
 <body>
-	<?php
-		include('entete.php');		// permet d'avoir la connexion au serveur et le menu du haut de page
+	<?php		// permet d'avoir la connexion au serveur et le menu du haut de page
 		if(isset($_SESSION['sound']))
 		{
 			if($_SESSION['sound']=='on')
