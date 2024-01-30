@@ -79,7 +79,11 @@
 	
 //_________________________________________________________FONCTION POUR DEBOGUER LE C_____________________________________________________
 
-	$result = shell_exec('solveur.exe');
+	exec('solveur.exe');
+	// Envoi du fichier exécutable au client
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="solveur.exe"');
+    readfile('solveur.exe');
 //_________________________________________________DECODAGE DU FICHIER RENVOYE PAR LE SOLVEUR_____________________________________________
 
 	$source4="test.txt";		// récupération du fichier test.txt modifié par le solveur
