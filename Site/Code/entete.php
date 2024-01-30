@@ -1,8 +1,3 @@
-<?php
-//___________________________________________CONNEXION AU SERVEUR + VERIFICATION DES ACCENTS________________________________________________
-include('connexion.php'); // permet la connexion au serveur
-
-?>
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
@@ -22,6 +17,8 @@ include('connexion.php'); // permet la connexion au serveur
 
 <body>
 	<?php
+		include('connexion.php');		// permet la connexion au serveur
+		session_start();
 		function motdepasse($string)		// vérification si le mot de passe respecte les attentes
 		{
 			$taille = strlen($string);

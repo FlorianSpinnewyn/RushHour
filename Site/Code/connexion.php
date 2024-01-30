@@ -7,7 +7,7 @@
 	$password = "kku3kw4m"; // Remplacez "votre_mot_de_passe" par votre mot de passe
 	$database = "projet"; // Remplacez "votre_nom_de_database" par le nom de votre base de données
 
-	$link = new mysqli($host, $username, $password, $database, $port);
+	$link = mysqli_connect($host, $username, $password, $database, $port);
 	
 	if ($link == false)		// en cas d'erreur
 	{
