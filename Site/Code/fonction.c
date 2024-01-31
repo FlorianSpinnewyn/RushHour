@@ -5,14 +5,15 @@
 #include <locale.h>
 
 FILE* recupfichier(char nomfichier[]) {
-	FILE* fic_rep;
-	int err = fopen_s(&fic_rep, nomfichier, "a+");
-	if (err == -1) {
-		return NULL;
-	}
-	if (fic_rep == NULL)
-		return NULL;
-	return fic_rep;
+    FILE* fic_rep = fopen(nomfichier, "a+");
+
+    if (fic_rep == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        // Gestion de l'erreur, par exemple, exit(EXIT_FAILURE);
+        return NULL;
+    }
+
+    return fic_rep;
 }
 
 CARTE recupInfo(FILE* fichier) {
@@ -52,7 +53,7 @@ int recupInfoCar(CARTE* carte) {
 			carte->vehicule[k].taille = 0;
 			carte->vehicule[k].nom = k + 65;
 		}
-		for (int p = 11; p <= 14; p++) {					// On differencie les camions des voitures( Les voitures allant de A à L et les camions de O à R)
+		for (int p = 11; p <= 14; p++) {					// On differencie les camions des voitures( Les voitures allant de A ï¿½ L et les camions de O ï¿½ R)
 			carte->vehicule[p].nom = p + 68;
 		}
 		carte->vehicule[15].nom = 88;						// et pour finir la voiture X qui represente celle qui doit sortir
@@ -60,8 +61,8 @@ int recupInfoCar(CARTE* carte) {
 		int a;
 		int i = 0;
 
-		for (int x = 0; x < 6; x++) {						//On parcours ensuite la grille afin de trouver quelles sont les voitures présentes dans la grille
-			for (int y = 0; y < 6; y++) {					//Et on affecte à chaque vehicule sa taille et ses coordonnées
+		for (int x = 0; x < 6; x++) {						//On parcours ensuite la grille afin de trouver quelles sont les voitures prï¿½sentes dans la grille
+			for (int y = 0; y < 6; y++) {					//Et on affecte ï¿½ chaque vehicule sa taille et ses coordonnï¿½es
 				if (carte->Grille[x][y] == 'X') {
 					a = 15;
 				}
@@ -193,7 +194,7 @@ int JeuFinit(struct Noeud* pere, LISTEMOUV* listeMouv) {
 	int i = pere->data.vehicule[15].coord->x;
 	while (i < 6) {
 		if ((pere->data.Grille[2][i] != 'X') && (pere->data.Grille[2][i] != 'W')) {				//On verifie si la voiture rouge peut sortir
-			return 0; // il y a un véhicule devant
+			return 0; // il y a un vï¿½hicule devant
 		}
 		i++;
 	}
@@ -224,19 +225,19 @@ struct maillonFils* creeUnFils(struct Noeud* pere, struct Arbre* monarbre, char 
 	tmp->noeud.nbFils = 0;
 	tmp->noeud.parent = pere;
 	tmp->suivant = NULL;
-	bougeVoiture(&tmp->noeud.data, deplacement, i);			// On change ensuite la grille et les coordonnées de la voiture qu'on souhaite bouger
+	bougeVoiture(&tmp->noeud.data, deplacement, i);			// On change ensuite la grille et les coordonnï¿½es de la voiture qu'on souhaite bouger
 	if (existedeja(tmp->noeud.data.Grille, listeGrille) == 1) {		//On verifie si la grille existe deja(afin de ne pas multiplier des branches inutilement)
 		if (pere->fils == NULL) {
-			pere->fils = tmp;											//si oui, on donne alors l'adresse du maillon crée au pere->fils si c'est son premier fils
+			pere->fils = tmp;											//si oui, on donne alors l'adresse du maillon crï¿½e au pere->fils si c'est son premier fils
 		}
-		else {																//sinon, on parcours la liste de fils, et on rajoute le nouveau à la fin
+		else {																//sinon, on parcours la liste de fils, et on rajoute le nouveau ï¿½ la fin
 			struct maillonFils* tmp1 = pere->fils;
 			for (int i = 0; i < (pere->nbFils - 1); i++) {
 				tmp1 = tmp1->suivant;
 			}
 			tmp1->suivant = tmp;
 		}
-		pere->nbFils++;														//on incrémente ensuite le nombre de fils du pere et le nombre total de noeud de l'arbre
+		pere->nbFils++;														//on incrï¿½mente ensuite le nombre de fils du pere et le nombre total de noeud de l'arbre
 		monarbre->nbDeNoeud++;
 		return tmp;
 	}
@@ -254,12 +255,12 @@ int AnalyseLaCarte(struct Noeud* pere, struct Arbre* monarbre, LISTEBFS* listebf
 	}
 	for (int i = 0; i < 16; i++) {															// si le jeu n'est pas fini, on parcours alors le tableau de vehicules
 		voitureMove = pere->data.vehicule[i].nom;
-		if (pere->data.vehicule[i].taille != 0) {											//et si le vehicule est présent dans la grille(ie taille != 0)
-			if (pere->data.vehicule[i].direction == 0) {									// Alors selon la direction(0 ou 1) on va verifié si la voiture peut se déplacer 
-				if (verifMur(i, pere->data, 'h') == 1) {									//içi en haut par exemple		
-					tmp = pere->data;														// alors on va appeler la fonction créer un fils
-					fils = creeUnFils(pere, monarbre, 'h', voitureMove, listeGrille, i);	// Qui nous retourne soit un pointeur vers un fils soit NULL selon si le cas étudié existe déjà
-					if (fils != NULL) {														// Et si la fonction ne renvoie pas nul, alors on l'ajoute a la liste des noeuds à étudier
+		if (pere->data.vehicule[i].taille != 0) {											//et si le vehicule est prï¿½sent dans la grille(ie taille != 0)
+			if (pere->data.vehicule[i].direction == 0) {									// Alors selon la direction(0 ou 1) on va verifiï¿½ si la voiture peut se dï¿½placer 
+				if (verifMur(i, pere->data, 'h') == 1) {									//iï¿½i en haut par exemple		
+					tmp = pere->data;														// alors on va appeler la fonction crï¿½er un fils
+					fils = creeUnFils(pere, monarbre, 'h', voitureMove, listeGrille, i);	// Qui nous retourne soit un pointeur vers un fils soit NULL selon si le cas ï¿½tudiï¿½ existe dï¿½jï¿½
+					if (fils != NULL) {														// Et si la fonction ne renvoie pas nul, alors on l'ajoute a la liste des noeuds ï¿½ ï¿½tudier
 						AjoutMaillonBFS(listebfs, &fils->noeud);							// Selon la fonction BFS(parcours d'un arbre en largeur)
 					}
 				}
@@ -293,12 +294,12 @@ int AnalyseLaCarte(struct Noeud* pere, struct Arbre* monarbre, LISTEBFS* listebf
 }
 
 int bougeVoiture(CARTE* carte, char sens, int k) {
-	//selon le sens(haut/bas/gauche/droite) de la voiture et selon la voiture(obtenu grace a l'indice k), on va déplacer une voiture dans la grille mais aussi modifier ses coordonnées
+	//selon le sens(haut/bas/gauche/droite) de la voiture et selon la voiture(obtenu grace a l'indice k), on va dï¿½placer une voiture dans la grille mais aussi modifier ses coordonnï¿½es
 	switch (sens) {
 	case 'h':																												//on verifie le sens
 		if (carte->vehicule[k].taille == 2) {																				//puis la taille de la voiture et on modifie la grille
-			carte->Grille[carte->vehicule[k].coord[0].y - 1][carte->vehicule[k].coord[0].x] = carte->vehicule[k].nom;		//içi on remplace la case au dessus de la voiture initiale par la lettre de la voiture
-			carte->Grille[carte->vehicule[k].coord[1].y][carte->vehicule[k].coord[0].x] = 'W';								//içi on remplace la case en dessous contenant précédemment la voiture par du vide
+			carte->Grille[carte->vehicule[k].coord[0].y - 1][carte->vehicule[k].coord[0].x] = carte->vehicule[k].nom;		//iï¿½i on remplace la case au dessus de la voiture initiale par la lettre de la voiture
+			carte->Grille[carte->vehicule[k].coord[1].y][carte->vehicule[k].coord[0].x] = 'W';								//iï¿½i on remplace la case en dessous contenant prï¿½cï¿½demment la voiture par du vide
 		}
 		if (carte->vehicule[k].taille == 3) {																				//pareil pour un vehicule de taille 3
 			if (carte->vehicule[k].coord[0].y != 0) {
@@ -307,7 +308,7 @@ int bougeVoiture(CARTE* carte, char sens, int k) {
 				carte->vehicule[k].coord[2].y--;
 			}
 		}
-		carte->vehicule[k].coord[1].y--;																					//et on modifie au final les coordonnées
+		carte->vehicule[k].coord[1].y--;																					//et on modifie au final les coordonnï¿½es
 		carte->vehicule[k].coord[0].y--;
 		break;
 	case 'b':
@@ -359,7 +360,7 @@ int bougeVoiture(CARTE* carte, char sens, int k) {
 }
 
 int verifMur(int indice, CARTE carte, char sens) {
-	//Selon le sens de la voiture, on regarde s'il y a du vide dans la direction où la voiture veut se déplacer
+	//Selon le sens de la voiture, on regarde s'il y a du vide dans la direction oï¿½ la voiture veut se dï¿½placer
 	//la fonction retourne 1 si c'est le cas, et 0 sinon
 	if ((sens == 'h' && carte.vehicule[indice].direction == 0)) {
 		if (carte.vehicule[indice].coord[0].y != 0) {
@@ -419,11 +420,11 @@ int initialisationBFS(LISTEBFS* liste) {
 
 int AjoutMaillonBFS(LISTEBFS* liste, struct Noeud* Noeud) {
 	MaillonBFS* tmp = (MaillonBFS*)malloc(sizeof(MaillonBFS));			//allocation de memoire pour un Maillon Temporaire
-	if (tmp == NULL) {													//on verifie si le malloc a fonctionné
+	if (tmp == NULL) {													//on verifie si le malloc a fonctionnï¿½
 		return -1;
 	}
 	tmp->noeud = Noeud;													//on se place au debut de la file de noeud
-	if (liste->head == NULL) {											//Si le debut n'a pas été intialisé( NULL), on affecte le debut avec l'adresse de tmp
+	if (liste->head == NULL) {											//Si le debut n'a pas ï¿½tï¿½ intialisï¿½( NULL), on affecte le debut avec l'adresse de tmp
 		liste->head = tmp;
 	}
 	else {																//sinon, on affecte au noeud qui suit le (anciennement) dernier noeud
@@ -431,14 +432,14 @@ int AjoutMaillonBFS(LISTEBFS* liste, struct Noeud* Noeud) {
 	}
 	tmp->suivant = NULL;
 	liste->tail = tmp;													//on change alors la fin par l'adresse de tmp
-	liste->nb++;														//et on incrémente le nombre de noeud
+	liste->nb++;														//et on incrï¿½mente le nombre de noeud
 	return 0;
 }
 
 int BFS(LISTEBFS* liste, struct Arbre* monarbre, LISTEGRILLE* listeGrille, LISTEMOUV* listeMouv) {
 	MaillonBFS* tmp = liste->head;
 	while (tmp != NULL) {
-		if (AnalyseLaCarte(tmp->noeud, monarbre, liste, listeGrille, listeMouv) == 1) { // on appelle la fonction AnalyseLaCarte jusqu'à ce qu'elle retourne 1 , qui signifie que le jeu est fini
+		if (AnalyseLaCarte(tmp->noeud, monarbre, liste, listeGrille, listeMouv) == 1) { // on appelle la fonction AnalyseLaCarte jusqu'ï¿½ ce qu'elle retourne 1 , qui signifie que le jeu est fini
 			printf("\njeu finis\n");
 			display(tmp->noeud->data);													//On affiche la grille finale
 			return 1; // jeu fini
@@ -488,8 +489,8 @@ int compareTab(char grille[6][6], MAILLONGRILLE* maillon) {
 }
 
 int ajouterGrille(LISTEGRILLE* liste, char grille[6][6]) {
-	MAILLONGRILLE* tmp = (MAILLONGRILLE*)malloc(sizeof(MAILLONGRILLE));				//allocation de mémoire pour une nouvelle grille
-	if (tmp == NULL) {																//On verifie si l'allocation a bien fonctionné
+	MAILLONGRILLE* tmp = (MAILLONGRILLE*)malloc(sizeof(MAILLONGRILLE));				//allocation de mï¿½moire pour une nouvelle grille
+	if (tmp == NULL) {																//On verifie si l'allocation a bien fonctionnï¿½
 		return -1;
 	}
 	for (int i = 0; i < 6; i++) {													//on copie la nouvelle grille dans la grille du maillon
@@ -497,7 +498,7 @@ int ajouterGrille(LISTEGRILLE* liste, char grille[6][6]) {
 			tmp->grille[i][j] = grille[i][j];
 		}
 	}
-	if (liste->head == NULL) {														//Si le debut n'a pas été intialisé( NULL), on affecte le debut avec l'adresse de tmp
+	if (liste->head == NULL) {														//Si le debut n'a pas ï¿½tï¿½ intialisï¿½( NULL), on affecte le debut avec l'adresse de tmp
 		liste->head = tmp;
 	}
 	else {																			//sinon on parcours la liste jusqu'a la fin afin d'y ajouter le maillon
@@ -509,7 +510,7 @@ int ajouterGrille(LISTEGRILLE* liste, char grille[6][6]) {
 	}
 	tmp->suivant = NULL;
 	liste->tail = tmp;
-	liste->nb++;																	//on incrémente le nombre de grilles
+	liste->nb++;																	//on incrï¿½mente le nombre de grilles
 	return 0;
 }
 
@@ -525,16 +526,16 @@ int ajouterMouv(struct Noeud* pere, LISTEMOUV* listemouv) {
 
 	while (tmp->parent != NULL)
 	{
-		MAILLON* tmp2 = (MAILLON*)malloc(sizeof(MAILLON*));							//allocation de mémoire pour un nouveau mouvement
-		if (tmp2 == NULL) {															//On verifie si l'allocation a bien fonctionné
+		MAILLON* tmp2 = (MAILLON*)malloc(sizeof(MAILLON*));							//allocation de mï¿½moire pour un nouveau mouvement
+		if (tmp2 == NULL) {															//On verifie si l'allocation a bien fonctionnï¿½
 			return -1;
 		}
 		if (listemouv->mouvfin == NULL)
 			listemouv->mouvfin = tmp2;
-		tmp2->direction = tmp->Deplacement;											//on ajoute le maillon créé au début de la liste						
+		tmp2->direction = tmp->Deplacement;											//on ajoute le maillon crï¿½ï¿½ au dï¿½but de la liste						
 		tmp2->voiture = tmp->voiture;												//Et on lui affecte une direction ainsi qu'une voiture provenant du noeud
 		tmp2->suiv = listemouv->mouv;
-		listemouv->nbMouv++;														//on incrémente le nombre de mouvements
+		listemouv->nbMouv++;														//on incrï¿½mente le nombre de mouvements
 		listemouv->mouv = tmp2;
 		tmp = tmp->parent;
 	}
@@ -543,9 +544,9 @@ int ajouterMouv(struct Noeud* pere, LISTEMOUV* listemouv) {
 
 int ajouteDemouvAlaFin(struct Noeud* pere, LISTEMOUV* listeMouv) {
 	while (verifMur(15, pere->data, 'd') == 1) {				//tant que la voiture 'X' ne soit pas au bout on la deplace et on ajoute les mouvements
-		bougeVoiture(&pere->data, 'd', 15);						//Deplace la voiture dans la grille et change ses coordonnées
-		MAILLON* tmp2 = (MAILLON*)malloc(sizeof(MAILLON*));		//allocation de mémoire pour un nouveau mouvement
-		if (tmp2 == NULL) {										//On verifie si l'allocation a bien fonctionné
+		bougeVoiture(&pere->data, 'd', 15);						//Deplace la voiture dans la grille et change ses coordonnï¿½es
+		MAILLON* tmp2 = (MAILLON*)malloc(sizeof(MAILLON*));		//allocation de mï¿½moire pour un nouveau mouvement
+		if (tmp2 == NULL) {										//On verifie si l'allocation a bien fonctionnï¿½
 			return -1;
 		}
 		tmp2->direction = 'd';									//On affecte au maillon une direction ainsi qu'une voiture provenant du noeud
@@ -553,7 +554,7 @@ int ajouteDemouvAlaFin(struct Noeud* pere, LISTEMOUV* listeMouv) {
 		tmp2->suiv = NULL;
 		listeMouv->mouvfin->suiv = tmp2;
 		listeMouv->mouvfin = tmp2;
-		listeMouv->nbMouv++;									//on incrémente le nombre de mouvements
+		listeMouv->nbMouv++;									//on incrï¿½mente le nombre de mouvements
 	}
 	return 0;
 }
@@ -564,7 +565,7 @@ int ChargeFile(FILE* fichier, LISTEMOUV listemouv) {
 		return -1;
 	MAILLON* tmp = listemouv.mouv;
 	while (tmp != NULL) {													//On parcours la liste de mouvements
-		fprintf(fichier, "\n%c%c", tmp->direction, tmp->voiture);			//Et on les ajoute uns à uns dans le fichier
+		fprintf(fichier, "\n%c%c", tmp->direction, tmp->voiture);			//Et on les ajoute uns ï¿½ uns dans le fichier
 		tmp = tmp->suiv;
 	}
 	return 0;
