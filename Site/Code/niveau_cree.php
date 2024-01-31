@@ -17,9 +17,9 @@ if(isset($_POST['info']) && isset($_POST['levelname']) && isset($_POST['vehicule
 		include('connexion.php');
 		session_start();
 			
-		$output = shell_exec('gcc fonction.c main.c -o mon_programme')
+		$output = shell_exec('gcc fonction.c main.c -o mon_programme');
 		$output2 = shell_exec('./mon_programme');	
-		
+
 		$source4="test.txt";		// récupération du fichier test.txt modifié par le solveur
 		$fichier4=fopen($source4,"r+");
 		if ($fichier4)

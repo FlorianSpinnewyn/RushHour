@@ -22,8 +22,8 @@
 		fwrite($file, "$nbrvoiture\n");
 		fwrite($file, "$nbrCamion");
 		fclose($file);
-		$output = shell_exec('gcc fonction.c1 main.c1 -o mon_programme1')
-		$output = shell_exec('./mon_programme1')
+		$output = shell_exec('gcc fonction.c1 main.c1 -o mon_programme1');
+		$output = shell_exec('./mon_programme1');
 		$file = fopen("generateur.txt", "r");
 		fgets($file);
 		fgets($file);

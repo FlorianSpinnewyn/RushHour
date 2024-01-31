@@ -78,8 +78,8 @@
 	}
 	
 //_________________________________________________________FONCTION POUR DEBOGUER LE C_____________________________________________________
-$output = shell_exec('gcc fonction.c main.c -o mon_programme')
-$output2 = shell_exec('./mon_programme');	
+	$output = shell_exec('gcc fonction.c main.c -o mon_programme');
+	$output2 = shell_exec('./mon_programme');	
 
 //_________________________________________________DECODAGE DU FICHIER RENVOYE PAR LE SOLVEUR_____________________________________________
 
