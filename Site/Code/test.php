@@ -5,7 +5,7 @@
 	{
 		if($_SESSION['nbreCoup'] == 0)		// si nous n'avons pas bougé de véhicule
 		{
-			$file = fopen("test.txt", "w");
+			$file = fopen("solveur.txt", "w");
 			fwrite($file, "$nbvoiture\n");
 			$chaine = "";
 			for($l=0; $l<6; $l++) {
@@ -79,14 +79,11 @@
 	
 //_________________________________________________________FONCTION POUR DEBOGUER LE C_____________________________________________________
 
-	exec('solveur.exe');
-	// Envoi du fichier exécutable au client
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="solveur.exe"');
-    readfile('solveur.exe');
+$output = shell_exec('./mon_programme');	
+
 //_________________________________________________DECODAGE DU FICHIER RENVOYE PAR LE SOLVEUR_____________________________________________
 
-	$source4="test.txt";		// récupération du fichier test.txt modifié par le solveur
+	$source4="solveur.txt";		// récupération du fichier test.txt modifié par le solveur
 	$fichier4=fopen($source4,"r+");
 	if ($fichier4)
 	{
